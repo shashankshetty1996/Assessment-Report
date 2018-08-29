@@ -62,7 +62,6 @@ nav {
     rgba(76, 163, 242, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#694ad6",endColorstr="#4ca3f2",GradientType=1);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4a76e6",endColorstr="#694ad6",GradientType=1);
   color: #ffffff;
   box-shadow: 1px 5px 25px #363d408a;
   z-index: 5;
@@ -279,4 +278,93 @@ main #landing .box-container .box-title {
 }
 main #landing .box-container .box:nth-child(1) {
   /* background-color: #ff5733; */
+}
+main #landing .box-container .box:nth-child(2) {
+  /* background-color: #ff5733; */
+}
+main #landing .box-container .box:nth-child(3) {
+  /* background-color: #ff5733; */
+}
+/* Model section */
+.model {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 61, 73, 0.8);
+  z-index: 10;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+.model.active {
+  display: block;
+}
+.model .model-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #ffffff;
+  min-height: 80vh;
+  min-width: 80vw;
+}
+.model .model-inner .model-header,
+.model .model-inner .model-footer {
+  background: rgba(105, 74, 214, 1);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(105, 74, 214, 1) 0%,
+    rgba(74, 118, 230, 1) 75%,
+    rgba(76, 163, 242, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(105, 74, 214, 1) 0%,
+    rgba(74, 118, 230, 1) 75%,
+    rgba(76, 163, 242, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(102, 72, 213, 1) 0%,
+    rgba(74, 118, 230, 1) 75%,
+    rgba(76, 163, 242, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#694ad6",endColorstr="#4ca3f2",GradientType=1);
+  height: 3em;
+  line-height: 3em;
+  color: #ffffff;
+}
+.model .model-inner .model-header .model-title {
+  text-align: center;
+}
+.model .model-inner .model-header a {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  font-size: 36px;
+  text-decoration: none;
+  color: inherit;
+}
+.model .model-inner .model-content {
+  position: relative;
+  padding: 3em auto;
+  width: 100%;
+  height: 100%;
+  max-height: 70vh;
+  overflow: hidden;
+}
+.model .model-inner .model-footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+.model .model-inner .model-footer a {
+  text-decoration: none;
+  color: #ffffff;
+  float: right;
+  margin: 0px 2em;
 }

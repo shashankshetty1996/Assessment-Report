@@ -30,9 +30,9 @@
     <hr class="divider">
     <ul class="sidenav">
       <li class="active">Home</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
+      <li data-target="html">HTML</li>
+      <li data-target="css">CSS</li>
+      <li data-target="js">JavaScript</li>
     </ul>
   </aside>
   <main>
@@ -47,20 +47,20 @@
         </div>
       </div>
       <div class="box-container">
-        <div class="box">
+        <div class="box" data-target="html">
           <h1 class="box-title">HTML</h1>
           <p>Hyper Text Markup Language (HTML) is the backbone of any website development process, without which a web page
             doesn't exist. When a user clicks on a word or a phrase that has a hyperlink, it will bring another web-page.
             A markup language indicates text can be turned into images, tables, links, and other representations. It is the
             HTML code that provides, how the site will look</p>
         </div>
-        <div class="box">
+        <div class="box" data-target="css">
           <h1 class="box-title">CSS</h1>
           <p>Cascading Style Sheets (CSS) controls the presentation aspect of the site and allows your site to have its own
             unique look. It does this by maintaining style sheets which sit on top of other style rules and are triggered
             based on other inputs, such as device screen size and resolution.</p>
         </div>
-        <div class="box">
+        <div class="box" data-target="js">
           <h1 class="box-title">JS</h1>
           <p>JavaScript is an event-based imperative programming language (as opposed to HTML's declarative language model)
             that is used to transform a static HTML page into a dynamic interface. JavaScript code can use the Document Object
@@ -68,7 +68,50 @@
         </div>
       </div>
     </section>
+
   </main>
+  <!-- HTML Model -->
+  <section class="model" id="html">
+    <div class="model-inner">
+      <div class="model-header">
+        <h1 class="model-title">Hyper Text Markup Language</h1>
+        <a href="#" data-close="html">&times;</a>
+      </div>
+      <div class="model-content">
+      </div>
+      <div class="model-footer">
+        <a href="#" data-target="css">CSS</a>
+      </div>
+    </div>
+  </section>
+  <!-- CSS Model -->
+  <section class="model" id="css">
+    <div class="model-inner">
+      <div class="model-header">
+        <h1 class="model-title">Cascading Style Sheets</h1>
+        <a href="#" data-close="css">&times;</a>
+      </div>
+      <div class="model-content">
+      </div>
+      <div class="model-footer">
+        <a href="#" data-target="js">JS</a>
+      </div>
+    </div>
+  </section>
+  <!-- JS Model -->
+  <section class="model" id="js">
+    <div class="model-inner">
+      <div class="model-header">
+        <h1 class="model-title">JavaScript</h1>
+        <a href="#" data-close="js">&times;</a>
+      </div>
+      <div class="model-content">
+      </div>
+      <div class="model-footer">
+        <a href="#" data-target="html">HTML</a>
+      </div>
+    </div>
+  </section>
 
   <script src="js/main.js"></script>
 </body>
