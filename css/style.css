@@ -192,8 +192,10 @@ aside ul.sidenav {
 
 aside ul.sidenav li {
   padding: 0em 2em;
+  cursor: pointer;
 }
 
+aside ul.sidenav li.active,
 aside ul.sidenav li:hover {
   background: #694ad6;
   background: -moz-linear-gradient(
@@ -266,6 +268,7 @@ main #landing .box-container .box {
   padding: 0em 1em 1em;
   border-radius: 5px;
   box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+  cursor: pointer;
 }
 main #landing .box-container .box:hover {
   box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2);
@@ -273,4 +276,7 @@ main #landing .box-container .box:hover {
 main #landing .box-container .box-title {
   text-align: center;
   margin: 1em auto;
+}
+main #landing .box-container .box:nth-child(1) {
+  /* background-color: #ff5733; */
 }
