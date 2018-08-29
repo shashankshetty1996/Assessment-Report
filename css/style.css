@@ -7,6 +7,31 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #eeeeee;
+}
+
+/* General CSS */
+.container {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.quote {
+  display: block;
+  text-align: center;
+  font-style: italic;
+}
+
+.quote::before {
+  content: open-quote;
+  font-size: 24px;
+  padding: 0px 2px;
+}
+
+.quote::after {
+  content: close-quote;
+  font-size: 24px;
+  padding: 0px 2px;
 }
 
 /* Navbar */
@@ -52,7 +77,7 @@ nav.active {
 nav .handburger {
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 40px;
   transform: translateY(-50%);
   line-height: 4em;
   cursor: pointer;
@@ -73,7 +98,6 @@ nav .handburger .bar3 {
 }
 
 nav.active .handburger .bar1 {
-  /* -webkit-transform: rotate(-45deg) translate(-9px, 6px); */
   -webkit-transform: rotate(-45deg) translate(-6px, 6px);
   transform: rotate(-45deg) translate(-6px, 6px);
 }
@@ -83,7 +107,6 @@ nav.active .handburger .bar2 {
 }
 
 nav.active .handburger .bar3 {
-  /* -webkit-transform: rotate(45deg) translate(-8px, -8px); */
   -webkit-transform: rotate(45deg) translate(-5px, -6px);
   transform: rotate(45deg) translate(-5px, -6px);
 }
@@ -140,10 +163,12 @@ aside::before {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#694ad6e6",endColorstr="#4ca3f2e6",GradientType=1);
   z-index: -1;
 }
+
 aside article.brand {
   width: 100%;
   padding: 2em 0px;
 }
+
 aside .divider {
   margin: 0.5em 0em;
 }
@@ -154,17 +179,21 @@ aside article.brand img {
   margin: 1em auto;
   border-radius: 50%;
 }
+
 aside article.brand .brand-details {
   text-align: center;
 }
+
 aside ul.sidenav {
   width: 100%;
   list-style: none;
   line-height: 3em;
 }
+
 aside ul.sidenav li {
   padding: 0em 2em;
 }
+
 aside ul.sidenav li:hover {
   background: #694ad6;
   background: -moz-linear-gradient(
@@ -196,4 +225,52 @@ main {
 nav.active ~ main {
   left: 250px;
   width: calc(100vw - 250px);
+}
+main #landing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+main #landing .card {
+  border-radius: 10px;
+  box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+}
+main #landing .card:hover {
+  box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2);
+}
+main #landing .card .card-image {
+  width: 100%;
+  height: 450px;
+}
+main #landing .card .card-image img {
+  width: 100%;
+  height: 100%;
+}
+main #landing .card .card-content {
+  padding: 1em 0.25em 3em;
+  text-align: justify;
+}
+main #landing .box-container {
+  position: absolute;
+  top: 95%;
+  left: 5%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 25px;
+}
+main #landing .box-container .box {
+  background-color: #ffffff;
+  text-align: justify;
+  padding: 0em 1em 1em;
+  border-radius: 5px;
+  box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+}
+main #landing .box-container .box:hover {
+  box-shadow: 2px 4px 8px 0 rgba(46, 61, 73, 0.2);
+}
+main #landing .box-container .box-title {
+  text-align: center;
+  margin: 1em auto;
 }
