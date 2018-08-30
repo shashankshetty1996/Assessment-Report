@@ -76,10 +76,11 @@ nav.active {
 nav .handburger {
   position: absolute;
   top: 50%;
-  left: 40px;
+  left: 20px;
   transform: translateY(-50%);
   line-height: 4em;
   cursor: pointer;
+  display: none; /* add in media query */
 }
 
 nav.active .handburger {

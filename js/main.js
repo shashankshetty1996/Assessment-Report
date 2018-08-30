@@ -13,6 +13,7 @@ let nav = (function() {
     links[activeClass].classList.remove("active");
     activeClass = index;
     links[activeClass].classList.add("active");
+    model.model.call(this);
   }
 
   // Adding click event listener for all the handburger icons
@@ -22,7 +23,7 @@ let nav = (function() {
 
   // Adding click event listener for all the links
   links.forEach((link, index) => {
-    link.addEventListener("click", changeActive.bind(this, index));
+    link.addEventListener("click", changeActive.bind(link, index));
   });
 })();
 
@@ -54,4 +55,8 @@ let model = (function() {
   modelCloseBtn.forEach(btn => {
     btn.addEventListener("click", modelClose);
   });
+
+  return {
+    model: modelShow
+  };
 })();
