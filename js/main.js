@@ -30,25 +30,25 @@ let nav = (function() {
 let model = (function() {
   // Variable Declarations
   let boxes = document.querySelectorAll(".box"),
-    modelCloseBtn = document.querySelectorAll("a[data-close]");
+    modelCloseBtn = document.querySelectorAll("a[data-target]"),
+    modelLayout = document.querySelectorAll(".model"),
+    activeModel = "";
 
-  // Display model functions
-  function modelShow() {
-    // Model type to be displayed
-    let targetId = this.getAttribute("data-target");
-    document.getElementById(targetId).classList.add("active");
+  // Toggle display model functions
+  function modelToggle() {
+    activeModel = this.getAttribute("data-target");
+    document.getElementById(activeModel).classList.toggle("active");
   }
 
   // Close display model
   function modelClose(e) {
     e.preventDefault();
-    let targetId = this.getAttribute("data-close");
-    document.getElementById(targetId).classList.remove("active");
+    modelToggle.call(this);
   }
 
   // Adding click event for the box
   boxes.forEach(box => {
-    box.addEventListener("click", modelShow);
+    box.addEventListener("click", modelToggle);
   });
 
   // Close model box
@@ -56,7 +56,16 @@ let model = (function() {
     btn.addEventListener("click", modelClose);
   });
 
+  /*
+
+  Overlay JS to be added
+  
+  */
+  modelLayout.forEach(model => {
+    model.addEventListener("click", () => {});
+  });
+
   return {
-    model: modelShow
+    model: modelToggle
   };
 })();
