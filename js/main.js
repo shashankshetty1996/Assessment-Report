@@ -77,14 +77,16 @@ let model = (function() {
 
 // window
 (function() {
-  function navInitializer() {
-    // Media Query of max width 1400px;
-    if (window.matchMedia("screen and (max-width: 1400px)").matches) {
-      nav.navbar.classList.remove("active");
-    }
-  }
+  let navInitializer = function() {
+    // if (window.matchMedia("screen and (min-width: 1400px)").matches) {
+    // }
+    nav.navbar.classList.remove("active");
+  };
 
-  navInitializer();
+  // navInitializer();
+  window.addEventListener("DOMContentLoaded", () => {
+    navInitializer();
+  });
   window.addEventListener("resize", () => {
     navInitializer();
   });

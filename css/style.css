@@ -232,7 +232,7 @@ nav.active ~ main {
 }
 main #landing {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -245,7 +245,7 @@ main #landing .card:hover {
 }
 main #landing .card .card-image {
   width: 100%;
-  height: 400px;
+  height: 550px;
 }
 main #landing .card .card-image img {
   width: 100%;
