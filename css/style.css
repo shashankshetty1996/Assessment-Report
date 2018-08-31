@@ -416,6 +416,12 @@ main #landing .box-container .box:nth-child(3) {
   main #landing .box-container {
     grid-template-columns: 1fr;
   }
+  .model .model-inner .model-header .model-title {
+    font-size: 18px;
+  }
+  .model .model-inner .model-header a {
+    right: 0.5em;
+  }
 }
 @media (max-width: 376px) {
   nav h1 {
@@ -426,8 +432,5 @@ main #landing .box-container .box:nth-child(3) {
   }
   .model .model-inner .model-header .model-title {
     font-size: 14px;
-  }
-  .model .model-inner .model-header a {
-    right: 0.5em;
   }
 }
