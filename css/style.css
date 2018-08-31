@@ -8,6 +8,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #eeeeee;
+  overflow-x: hidden;
 }
 
 /* General CSS */
@@ -80,6 +81,7 @@ nav .handburger {
   transform: translateY(-50%);
   line-height: 4em;
   cursor: pointer;
+  z-index: 7;
   display: none; /* add in media query */
 }
 
@@ -127,13 +129,13 @@ aside {
   background-position: center;
   height: 100vh;
   width: 250px;
-  box-shadow: 1px 5px 25px #363d408a;
   z-index: 3;
   transition: all 0.5s ease-in-out;
 }
 
 nav.active ~ aside {
   left: 0px;
+  box-shadow: 1px 5px 25px #363d408a;
 }
 
 aside::before {
@@ -230,9 +232,9 @@ nav.active ~ main {
 }
 main #landing {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -75%);
+  transform: translate(-50%, -50%);
 }
 main #landing .card {
   border-radius: 10px;
@@ -243,7 +245,7 @@ main #landing .card:hover {
 }
 main #landing .card .card-image {
   width: 100%;
-  height: 450px;
+  height: 300px;
 }
 main #landing .card .card-image img {
   width: 100%;
@@ -260,7 +262,7 @@ main #landing .box-container {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 25px;
+  grid-gap: 25px;
 }
 main #landing .box-container .box {
   background-color: #ffffff;
@@ -289,7 +291,7 @@ main #landing .box-container .box:nth-child(3) {
 /* Model section */
 .model {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -368,4 +370,64 @@ main #landing .box-container .box:nth-child(3) {
   color: #ffffff;
   float: right;
   margin: 0px 2em;
+}
+@media (max-width: 1400px) {
+  .container {
+    width: 95%;
+    margin: 0px auto;
+  }
+  nav .handburger {
+    display: block;
+  }
+  main #landing .card .card-image {
+    height: 300px;
+  }
+}
+@media (max-width: 991px) {
+  nav.active {
+    left: 0px;
+    width: 100vw;
+  }
+  nav.active .handburger {
+    left: 90%;
+  }
+  aside {
+    width: 200px;
+    z-index: 5;
+  }
+  nav.active ~ main {
+    left: 0px;
+    width: 100vw;
+  }
+  nav.active ~ main::after {
+    content: "";
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(46, 61, 73, 0.8);
+  }
+  main #landing .card .card-image {
+    height: 250px;
+  }
+}
+@media (max-width: 776px) {
+  main #landing .box-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 376px) {
+  nav h1 {
+    font-size: 18px;
+  }
+  nav .handburger {
+    left: 90%;
+  }
+  .model .model-inner .model-header .model-title {
+    font-size: 14px;
+  }
+  .model .model-inner .model-header a {
+    right: 0.5em;
+  }
 }

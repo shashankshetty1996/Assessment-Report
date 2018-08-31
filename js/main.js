@@ -2,6 +2,7 @@ let nav = (function() {
   // Variable Declarations
   let handburgers = document.querySelectorAll(".handburger"),
     links = document.querySelectorAll("aside ul.sidenav li"),
+    nav = document.querySelector("nav"),
     activeClass = 0;
 
   // Toggle Menu items
@@ -25,6 +26,10 @@ let nav = (function() {
   links.forEach((link, index) => {
     link.addEventListener("click", changeActive.bind(link, index));
   });
+
+  return {
+    navbar: nav
+  };
 })();
 
 let model = (function() {
@@ -68,4 +73,19 @@ let model = (function() {
   return {
     model: modelToggle
   };
+})();
+
+// window
+(function() {
+  function navInitializer() {
+    // Media Query of max width 1400px;
+    if (window.matchMedia("screen and (max-width: 1400px)").matches) {
+      nav.navbar.classList.remove("active");
+    }
+  }
+
+  navInitializer();
+  window.addEventListener("resize", () => {
+    navInitializer();
+  });
 })();
