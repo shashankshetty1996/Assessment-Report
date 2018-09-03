@@ -78,13 +78,15 @@ let model = (function() {
 // window
 (function() {
   let navInitializer = function() {
-    // if (window.matchMedia("screen and (min-width: 1400px)").matches) {
-    //   let cardImg = document.querySelector(".card-image img");
-    //   cardImg.setAttribute(
-    //     "src",
-    //     "https://images.unsplash.com/photo-1527153818091-1a9638521e2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5fce4ce8856a711cc50a14e03e58783a&auto=format&fit=crop&w=1458&q=80"
-    //   );
-    // }
+    if (window.matchMedia("screen and (min-width: 1400px)").matches) {
+      // let cardImg = document.querySelector(".card-image img");
+      // cardImg.setAttribute(
+      //   "src",
+      //   "https://images.unsplash.com/photo-1527153818091-1a9638521e2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5fce4ce8856a711cc50a14e03e58783a&auto=format&fit=crop&w=1458&q=80"
+      // );
+      nav.navbar.classList.add("active");
+      return;
+    }
     nav.navbar.classList.remove("active");
   };
 
