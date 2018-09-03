@@ -84,10 +84,6 @@ let model = (function() {
   };
 
   // navInitializer();
-  window.addEventListener("DOMContentLoaded", () => {
-    navInitializer();
-  });
-  window.addEventListener("resize", () => {
-    navInitializer();
-  });
+  window.addEventListener("DOMContentLoaded", navInitializer);
+  window.addEventListener("resize", navInitializer);
 })();
